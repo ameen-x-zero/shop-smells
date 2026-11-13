@@ -1,0 +1,19 @@
+Found a 13 line (77 tokens) duplication in the following files: 
+Starting at line 14 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\shop-smells\src\shop\ExcelReportGenerator.java
+Starting at line 14 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\shop-smells\src\shop\HtmlReportGenerator.java
+Starting at line 14 of C:\Users\VICTUS\Desktop\amin\kfupm\SWE\439\p\code\shop-smells\src\shop\PdfReportGenerator.java
+
+        sb.append("[EXCEL] Sales Report\n");
+        double total = 0;
+        int count = 0;
+        for (Order o : orders) {
+            if (o.getStatus() == OrderStatus.CANCELLED) {
+                continue;
+            }
+            double orderTotal = 0;
+            for (OrderItem i : o.getItems()) {
+                orderTotal += i.getProduct().getPrice() * i.getQuantity();
+            }
+            orderTotal -= o.getDiscount();
+            sb.append("ROW;" + o.getId() + " | " + o.getCustomer().getName() + " | " + orderTotal + "\n");
+

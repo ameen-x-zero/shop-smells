@@ -1,0 +1,1 @@
+src\shop\StoreManager.java:25:	GodClass:	Possible God Class (WMC=59, ATFD=60, TCC=5.413%)
