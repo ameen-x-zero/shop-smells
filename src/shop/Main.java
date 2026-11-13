@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // ---- الجزء 1: استخدام الـ God Class ----
+
         StoreManager store = new StoreManager();
         Category electronics = new Category(1, "Electronics");
         Category books = new Category(2, "Books");
@@ -31,7 +31,7 @@ public class Main {
         System.out.println(store.generateSalesReport());
         System.out.println(store.generateStatistics());
 
-        // ---- الجزء 2: استخدام الـ Code Clones ----
+     
         System.out.println("\n--- Discount clones ---");
         System.out.println(new StudentDiscountCalculator().calculate(o1));
         System.out.println(new EmployeeDiscountCalculator().calculate(o2));

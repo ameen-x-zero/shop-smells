@@ -1,10 +1,6 @@
 package shop;
 
-/**
- * ⚠️ CODE SMELL: Code Clones (المجموعة 1 - حاسبات الخصم)
- * هذا الكلاس نسخة شبه حرفية من StudentDiscountCalculator و EmployeeDiscountCalculator
- * و SeniorDiscountCalculator. الفرق الوحيد: نسبة الخصم (0.20) والمكافأة (100).
- */
+
 public class EmployeeDiscountCalculator {
 
     public double calculate(Order order) {

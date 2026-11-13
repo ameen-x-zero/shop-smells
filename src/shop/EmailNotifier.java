@@ -1,10 +1,6 @@
 package shop;
 
-/**
- * ⚠️ CODE SMELL: Code Clones (المجموعة 3 - الإشعارات)
- * EmailNotifier / SmsNotifier / WhatsAppNotifier
- * خطوات التحقق والتجهيز والإرسال نفسها مكررة، وما يتغير إلا اسم القناة.
- */
+
 public class EmailNotifier {
     private int sentCount = 0;
 

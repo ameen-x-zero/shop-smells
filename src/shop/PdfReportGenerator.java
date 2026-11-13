@@ -2,11 +2,7 @@ package shop;
 
 import java.util.List;
 
-/**
- * ⚠️ CODE SMELL: Code Clones (المجموعة 2 - مولدات التقارير)
- * PdfReportGenerator / ExcelReportGenerator / HtmlReportGenerator
- * منطق الحساب (الحلقة + الإجمالي + العدّاد) مكرر بالكامل، والمختلف فقط نص التنسيق.
- */
+
 public class PdfReportGenerator {
 
     public String generate(List<Order> orders) {

@@ -3,28 +3,10 @@ package shop;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * ⚠️⚠️ CODE SMELL: God Class ⚠️⚠️
- *
- * هذا الكلاس "يعرف كل شي ويسوي كل شي". مسؤولياته المختلطة:
- *   1) إدارة العملاء          2) إدارة المنتجات والمخزون
- *   3) إدارة الطلبات          4) حساب الخصومات
- *   5) حساب الضريبة والشحن    6) الدفع
- *   7) الفواتير               8) الإشعارات (إيميل / SMS)
- *   9) التقارير والإحصائيات  10) التحقق من البيانات (Validation)
- *
- * علامات الـ God Class الموجودة هنا:
- *   - كلاس ضخم (عدد الأسطر والدوال كبير)
- *   - حقول كثيرة (Low Cohesion)
- *   - يعتمد على أغلب كلاسات المشروع (High Coupling)
- *   - لو تغير أي شي (الضريبة، الإيميل، التقرير) لازم نعدّل هذا الكلاس
- *
- * الحل المقترح: Extract Class -> CustomerService, InventoryService, DiscountService,
- *               PaymentService, InvoiceService, NotificationService, ReportService.
- */
+
 public class StoreManager {
 
-    // ---------- حقول كثيرة ومتنوعة ----------
+   
     private final CustomerRepository customerRepo = new CustomerRepository();
     private final ProductRepository productRepo = new ProductRepository();
     private final OrderRepository orderRepo = new OrderRepository();
@@ -43,7 +25,7 @@ public class StoreManager {
     private int nextOrderId = 1;
     private int nextInvoiceId = 1;
 
-    // ---------- 1) إدارة العملاء ----------
+  
     public void addCustomer(Customer c) {
         if (!validateEmail(c.getEmail())) {
             Logger.log("Invalid email for customer " + c.getName());
@@ -62,7 +44,7 @@ public class StoreManager {
         c.addLoyaltyPoints((int) (amount / 10));
     }
 
-    // ---------- 2) المنتجات والمخزون ----------
+
     public void addProduct(Product p) { productRepo.save(p); }
 
     public boolean checkStock(Product p, int qty) { return p.getStock() >= qty; }
@@ -85,7 +67,7 @@ public class StoreManager {
         return result;
     }
 
-    // ---------- 3) إدارة الطلبات ----------
+
     public Order createOrder(int customerId) {
         Customer c = customerRepo.find(customerId);
         if (c == null) return null;
@@ -128,7 +110,7 @@ public class StoreManager {
         sendSms(o.getCustomer(), "Order " + o.getId() + " is on its way!");
     }
 
-    // ---------- 4) الخصومات (منطق مكرر أيضاً داخل الـ God Class) ----------
+  
     public double calculateDiscount(Order o) {
         double subtotal = calculateSubtotal(o);
         String type = o.getCustomer().getType();
@@ -148,7 +130,7 @@ public class StoreManager {
         return discount;
     }
 
-    // ---------- 5) الضريبة والشحن ----------
+   
     public double calculateSubtotal(Order o) {
         double s = 0;
         for (OrderItem i : o.getItems()) s += i.getTotal();
@@ -167,7 +149,7 @@ public class StoreManager {
         return calculateSubtotal(o) - o.getDiscount() + calculateTax(o) + calculateShipping(o);
     }
 
-    // ---------- 6) الدفع ----------
+
     public boolean processPayment(Order o, PaymentMethod method) {
         calculateDiscount(o);
         double total = calculateTotal(o);
@@ -191,7 +173,7 @@ public class StoreManager {
         return ok;
     }
 
-    // ---------- 7) الفواتير ----------
+
     public Invoice generateInvoice(Order o) {
         String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         Invoice inv = new Invoice(nextInvoiceId++, o, calculateTotal(o), date);
@@ -210,7 +192,7 @@ public class StoreManager {
         System.out.println("TOTAL: " + inv.getTotal());
     }
 
-    // ---------- 8) الإشعارات ----------
+
     public void sendEmail(Customer c, String msg) {
         if (c == null || msg == null || msg.trim().isEmpty()) return;
         System.out.println("[EMAIL] to " + c.getEmail() + ": " + msg);
@@ -223,7 +205,7 @@ public class StoreManager {
         smsSent++;
     }
 
-    // ---------- 9) التقارير والإحصائيات ----------
+  
     public String generateSalesReport() {
         StringBuilder sb = new StringBuilder("=== SALES REPORT ===\n");
         for (Order o : orderRepo.all()) {
@@ -242,7 +224,7 @@ public class StoreManager {
 
     public List<Order> allOrders() { return orderRepo.all(); }
 
-    // ---------- 10) التحقق من البيانات ----------
+
     public boolean validateEmail(String email) {
         return email != null && email.contains("@") && email.contains(".");
     }
