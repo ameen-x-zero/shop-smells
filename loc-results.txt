@@ -1,0 +1,32 @@
+
+File                            LOC
+----                            ---
+StoreManager.java               191
+Main.java                        40
+EmailNotifier.java               27
+WhatsAppNotifier.java            27
+SmsNotifier.java                 27
+HtmlReportGenerator.java         26
+PdfReportGenerator.java          26
+ExcelReportGenerator.java        26
+Order.java                       21
+Customer.java                    20
+EmployeeDiscountCalculator.java  18
+SeniorDiscountCalculator.java    18
+StudentDiscountCalculator.java   18
+Product.java                     14
+Payment.java                     12
+Address.java                     11
+Invoice.java                     11
+ProductRepository.java            8
+CustomerRepository.java           8
+OrderRepository.java              8
+OrderItem.java                    8
+InvoiceRepository.java            8
+Category.java                     7
+Logger.java                       4
+PaymentMethod.java                2
+OrderStatus.java                  2
+
+
+

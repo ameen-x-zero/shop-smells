@@ -1,0 +1,39 @@
+src\shop\Address.java:3:	NcssCount:	The class 'Address' has a NCSS line count of 14 (Highest = 4).
+src\shop\Category.java:3:	NcssCount:	The class 'Category' has a NCSS line count of 10 (Highest = 3).
+src\shop\Customer.java:3:	NcssCount:	The class 'Customer' has a NCSS line count of 29 (Highest = 7).
+src\shop\CustomerRepository.java:5:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\CustomerRepository.java:5:	NcssCount:	The class 'CustomerRepository' has a NCSS line count of 8 (Highest = 2).
+src\shop\EmailNotifier.java:4:	NcssCount:	The class 'EmailNotifier' has a NCSS line count of 21 (Highest = 17).
+src\shop\EmployeeDiscountCalculator.java:4:	CouplingBetweenObjects:	A value of 2 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\EmployeeDiscountCalculator.java:4:	NcssCount:	The class 'EmployeeDiscountCalculator' has a NCSS line count of 12 (Highest = 11).
+src\shop\ExcelReportGenerator.java:6:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\ExcelReportGenerator.java:6:	NcssCount:	The class 'ExcelReportGenerator' has a NCSS line count of 19 (Highest = 18).
+src\shop\HtmlReportGenerator.java:6:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\HtmlReportGenerator.java:6:	NcssCount:	The class 'HtmlReportGenerator' has a NCSS line count of 19 (Highest = 18).
+src\shop\Invoice.java:3:	NcssCount:	The class 'Invoice' has a NCSS line count of 18 (Highest = 5).
+src\shop\InvoiceRepository.java:5:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\InvoiceRepository.java:5:	NcssCount:	The class 'InvoiceRepository' has a NCSS line count of 8 (Highest = 2).
+src\shop\Logger.java:3:	NcssCount:	The class 'Logger' has a NCSS line count of 3 (Highest = 2).
+src\shop\Main.java:5:	CouplingBetweenObjects:	A value of 6 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\Main.java:5:	NcssCount:	The class 'Main' has a NCSS line count of 36 (Highest = 35).
+src\shop\Order.java:6:	CouplingBetweenObjects:	A value of 5 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\Order.java:6:	NcssCount:	The class 'Order' has a NCSS line count of 30 (Highest = 3).
+src\shop\OrderItem.java:3:	NcssCount:	The class 'OrderItem' has a NCSS line count of 12 (Highest = 3).
+src\shop\OrderRepository.java:5:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\OrderRepository.java:5:	NcssCount:	The class 'OrderRepository' has a NCSS line count of 8 (Highest = 2).
+src\shop\OrderStatus.java:3:	NcssCount:	The enum 'OrderStatus' has a NCSS line count of 1 (Highest = -2147483648).
+src\shop\Payment.java:3:	NcssCount:	The class 'Payment' has a NCSS line count of 18 (Highest = 5).
+src\shop\PaymentMethod.java:3:	NcssCount:	The enum 'PaymentMethod' has a NCSS line count of 1 (Highest = -2147483648).
+src\shop\PdfReportGenerator.java:6:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\PdfReportGenerator.java:6:	NcssCount:	The class 'PdfReportGenerator' has a NCSS line count of 19 (Highest = 18).
+src\shop\Product.java:3:	NcssCount:	The class 'Product' has a NCSS line count of 24 (Highest = 6).
+src\shop\ProductRepository.java:5:	CouplingBetweenObjects:	A value of 3 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\ProductRepository.java:5:	NcssCount:	The class 'ProductRepository' has a NCSS line count of 8 (Highest = 2).
+src\shop\SeniorDiscountCalculator.java:4:	CouplingBetweenObjects:	A value of 2 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\SeniorDiscountCalculator.java:4:	NcssCount:	The class 'SeniorDiscountCalculator' has a NCSS line count of 12 (Highest = 11).
+src\shop\SmsNotifier.java:4:	NcssCount:	The class 'SmsNotifier' has a NCSS line count of 21 (Highest = 17).
+src\shop\StoreManager.java:7:	CouplingBetweenObjects:	A value of 13 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\StoreManager.java:7:	NcssCount:	The class 'StoreManager' has a NCSS line count of 168 (Highest = 22).
+src\shop\StudentDiscountCalculator.java:4:	CouplingBetweenObjects:	A value of 2 may denote a high amount of coupling within the class (threshold: 1)
+src\shop\StudentDiscountCalculator.java:4:	NcssCount:	The class 'StudentDiscountCalculator' has a NCSS line count of 12 (Highest = 11).
+src\shop\WhatsAppNotifier.java:4:	NcssCount:	The class 'WhatsAppNotifier' has a NCSS line count of 21 (Highest = 17).
