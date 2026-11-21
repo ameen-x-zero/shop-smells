@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="Coupling Ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2.0.0.xsd">
+
+    <description>Coupling rules for Java using PMD 7</description>
+
+    <rule ref="category/java/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="threshold" value="1"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/bestpractices.xml/LooseCoupling"/>
+
+    <rule ref="category/java/design.xml/ExcessiveImports">
+        <properties>
+            <property name="minimum" value="5"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/design.xml/LawOfDemeter"/>
+
+</ruleset>
